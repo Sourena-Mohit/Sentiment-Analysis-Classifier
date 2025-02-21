@@ -21,7 +21,7 @@ val_bow_features = p1.extract_bow_feature_vectors(val_texts, dictionary)
 test_bow_features = p1.extract_bow_feature_vectors(test_texts, dictionary)
 
 # -------------------------------------------------------------------------------
-# Problem 5
+# Algorithm Discussion , plots and convergence
 # -------------------------------------------------------------------------------
 
 toy_features, toy_labels = toy_data = utils.load_toy_data('toy_data.tsv')
@@ -45,7 +45,7 @@ plot_toy_results('Average Perceptron', thetas_avg_perceptron)
 plot_toy_results('Pegasos', thetas_pegasos)
 
 # -------------------------------------------------------------------------------
-# Problem 7
+# Classification and Accuracy
 # -------------------------------------------------------------------------------
 
 T = 10
@@ -67,7 +67,7 @@ print("{:50} {:.4f}".format("Training accuracy for Pegasos:", avg_peg_train_accu
 print("{:50} {:.4f}".format("Validation accuracy for Pegasos:", avg_peg_val_accuracy))
 
 # -------------------------------------------------------------------------------
-# Problem 8
+# Parameter Tuning & Accuracy on the test set
 # -------------------------------------------------------------------------------
 
 data = (train_bow_features, train_labels, val_bow_features, val_labels)
@@ -135,3 +135,6 @@ print(sorted_word_features[:10])
 # -------------------------------------------------------------------------------
 # Feature Engineering
 # -------------------------------------------------------------------------------
+# Try to implement stop words removal in the feature engineering code.
+# by editing the bag_of_words function in project1.py
+# set remove_stopword=True or remove_stopword=False to see the difference
